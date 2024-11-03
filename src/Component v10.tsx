@@ -83,6 +83,7 @@ function Cargo10() {
         <aside className="hidden md:block w-16 fixed left-4 top-1/2 -translate-y-1/2 bg-gray-100 rounded-lg shadow-lg">
           <div className="flex flex-col items-center py-4 space-y-4">
             <ContactButton icon={<Phone />} text="Gọi ngay" color="bg-blue-600" />
+            <ContactButton icon={<Phone />} text="Gọi ngay" color="bg-blue-600" />
             <ContactButton icon={<MessageCircle />} text="Zalo" color="bg-green-500" />
             <ContactButton icon={<Facebook />} text="Facebook" color="bg-blue-800" />
           </div>
@@ -158,11 +159,16 @@ function Cargo10() {
 
 
             {/* Why Choose Us */}
-            <ServicesSection></ServicesSection>
-            <WhyChooseUs></WhyChooseUs>           
+
+            
+            {/* <ServicesSection></ServicesSection>
+            <WhyChooseUs></WhyChooseUs>            */}
 
             <h2 className="text-2xl font-bold mb-6 text-red-600">SỰ HÀI LÒNG TỪ KHÁCH HÀNG</h2>
             <TestimonialCarousel2></TestimonialCarousel2>
+
+
+
             {/* Customer Reviews Carousel */}
             {/* <section className="mb-12">
               <div className="relative">

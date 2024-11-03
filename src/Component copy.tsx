@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Search, Phone, MessageCircle, Facebook, Menu, ChevronLeft, ChevronRight } from 'lucide-react'
-import ServicesSection from './services-section'
+import StickyHeader from './header'
 
-function Cargo10000() {
+export default function Cargo() {
   const [customerCode, setCustomerCode] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0)
@@ -26,22 +26,16 @@ function Cargo10000() {
 
   const blogPosts = [
     {
-      id: 1,
       title: "Làm sao để chuyển hàng từ Đức về Việt Nam tiết kiệm nhất?",
-      date: "November 22, 2023",
-      image: "/placeholder.svg?height=200&width=300"
+      date: "November 22, 2023"
     },
     {
-      id: 2,
       title: "Rủi ro và cách xử lý khi gửi hàng từ Đức về Việt Nam",
-      date: "November 22, 2023",
-      image: "/placeholder.svg?height=200&width=300"
+      date: "November 22, 2023"
     },
     {
-      id: 3,
       title: "Mua hàng hộ tại các nước EU nhanh gọn, tiết kiệm nhất",
-      date: "November 22, 2023",
-      image: "/placeholder.svg?height=200&width=300"
+      date: "November 22, 2023"
     }
   ]
 
@@ -73,9 +67,54 @@ function Cargo10000() {
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      
+      {/* <StickyHeader></StickyHeader> */}
+      {/* Header */}
+      {/* <header className="bg-blue-600 text-white">
+        <div className="container mx-auto px-4 py-4">
+          <nav className="flex justify-between items-center">
+            <div className="text-2xl font-bold">VU Cargo</div>
+            <div className="hidden md:flex space-x-4">
+              <a href="#" className="hover:underline">Trang Chủ</a>
+              <a href="#" className="hover:underline">Dịch Vụ</a>
+              <a href="#" className="hover:underline">Bảng Giá</a>
+              <a href="#" className="hover:underline">Chính Sách Mua Hàng</a>
+              <a href="#" className="hover:underline">Blog</a>
+              <a href="#" className="hover:underline">Liên Hệ</a>
+            </div>
+            <div className="hidden md:flex space-x-2">
+              <button className="bg-white text-blue-600 px-4 py-2 rounded">Đăng Nhập</button>
+              <button className="bg-yellow-400 text-blue-600 px-4 py-2 rounded">Đăng Kí</button>
+            </div>
+            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Menu className="h-6 w-6" />
+            </button>
+          </nav>
+          {isMenuOpen && (
+            <div className="mt-4 md:hidden">
+              <a href="#" className="block py-2">Trang Chủ</a>
+              <a href="#" className="block py-2">Dịch Vụ</a>
+              <a href="#" className="block py-2">Bảng Giá</a>
+              <a href="#" className="block py-2">Chính Sách Mua Hàng</a>
+              <a href="#" className="block py-2">Blog</a>
+              <a href="#" className="block py-2">Liên Hệ</a>
+              <div className="mt-4 space-y-2">
+                <button className="bg-white text-blue-600 px-4 py-2 rounded w-full">Đăng Nhập</button>
+                <button className="bg-yellow-400 text-blue-600 px-4 py-2 rounded w-full">Đăng Kí</button>
+              </div>
+            </div>
+          )}
+        </div>
+      </header> */}
+
       <div className="flex">
         {/* Sticky Sidebar for Web View */}
+        {/* <aside className="hidden md:block w-16 fixed left-0 top-0 h-screen bg-gray-100">
+          <div className="flex flex-col items-center justify-center h-full space-y-4">
+            <ContactButton icon={<Phone />} text="Gọi ngay" color="bg-blue-600" />
+            <ContactButton icon={<MessageCircle />} text="Zalo" color="bg-green-500" />
+            <ContactButton icon={<Facebook />} text="Facebook" color="bg-blue-800" />
+          </div>
+        </aside> */}
         <aside className="hidden md:block w-16 fixed left-4 top-1/2 -translate-y-1/2 bg-gray-100 rounded-lg shadow-lg">
           <div className="flex flex-col items-center py-4 space-y-4">
             <ContactButton icon={<Phone />} text="Gọi ngay" color="bg-blue-600" />
@@ -83,7 +122,6 @@ function Cargo10000() {
             <ContactButton icon={<Facebook />} text="Facebook" color="bg-blue-800" />
           </div>
         </aside>
-
 
         {/* Main Content */}
         <main className="flex-1 md:ml-16">
@@ -100,6 +138,7 @@ function Cargo10000() {
                   src={src}
                   alt={`Hero image ${index + 1}`}
                   className="w-full h-full object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
               </div>
             ))}
@@ -170,39 +209,34 @@ function Cargo10000() {
             {/* Services Section */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-blue-600">Dịch Vụ</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ServiceDetailCard
                   title="Vận chuyển hàng Đức, EU về Việt Nam"
                   description="Chúng tôi cung cấp dịch vụ vận chuyển hàng từ Đức và các nước EU về Việt Nam qua đường hàng không và đường biển. Với thời gian vận chuyển nhanh chóng chỉ từ 4-6 ngày, hàng hóa được đảm bảo an toàn, đáp ứng mọi nhu cầu của bạn."
-                  imageSrc="/placeholder.svg?height=300&width=400"
                 />
                 <ServiceDetailCard
                   title="Vận chuyển hàng Việt Nam đi Đức, EU"
                   description="Vận chuyển hàng hóa từ Việt Nam sang Đức và các nước EU chưa bao giờ dễ dàng hơn. Chúng tôi hỗ trợ gửi hàng qua đường hàng không với tốc độ nhanh hoặc đường biển với chi phí tối ưu, đảm bảo an toàn cho mọi loại hàng hóa."
-                  imageSrc="/placeholder.svg?height=300&width=400"
                 />
                 <ServiceDetailCard
                   title="Mua hộ hàng Đức, EU và Shopee miễn phí"
                   description="Chúng tôi hỗ trợ mua hộ từ các trang thương mại điện tử uy tín như Amazon, eBay, DM... tại Đức và các nước EU, đồng thời nhận mua hộ Shopee tại Việt Nam gửi sang Đức, EU. Quy trình nhanh gọn và chi phí hợp lý giúp bạn dễ dàng sở hữu những sản phẩm yêu thích."
-                  imageSrc="/placeholder.svg?height=300&width=400"
                 />
               </div>
             </section>
-            <ServicesSection></ServicesSection>
-
 
             {/* Why Choose Us */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-6 text-red-500">VÌ SAO NÊN CHỌN VU CARGO?</h2>
+              <h2 className="text-2xl font-bold mb-6 text-blue-600">VÌ SAO NÊN CHỌN VU CARGO?</h2>
               <p className="mb-6">
                 VU Cargo mang đến dịch vụ vận chuyển nhanh chóng và an toàn, với giá cả cạnh tranh cho cả đường
                 bay và đường biển. Chúng tôi hỗ trợ mua hộ hàng từ các nền tảng thương mại điện tử lớn, giúp bạn dễ
                 dàng sở hữu sản phẩm yêu thích.
               </p>
-              <div className="grid grid-cols-1  md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <FeatureCard
                   title="Uy Tín"
-                  description="Với 8 năm kinh nghiệm trong lĩnh vực xuất nhập khẩu cùng với sự tin tưởng của hơn 10.000 khách hàng, Vu Cargo tự tin mang dịch vụ của mình ra khắp nhiều nước."
+                  description="Với 8  năm kinh nghiệm trong lĩnh vực xuất nhập khẩu cùng với sự tin tưởng của hơn 10.000 khách hàng, Vu Cargo tự tin mang dịch vụ của mình ra khắp nhiều nước."
                 />
                 <FeatureCard
                   title="An Toàn"
@@ -249,10 +283,8 @@ function Cargo10000() {
               <h2 className="text-2xl font-bold mb-6 text-blue-600">TIN TỨC</h2>
               <div className="relative">
                 <BlogPostCard
-                  id={blogPosts[currentBlogIndex].id}
                   title={blogPosts[currentBlogIndex].title}
                   date={blogPosts[currentBlogIndex].date}
-                  image={blogPosts[currentBlogIndex].image}
                 />
                 <div className="absolute top-1/2 transform -translate-y-1/2 left-0 -ml-4">
                   <button
@@ -349,26 +381,17 @@ function ContactButton({ icon, text, color }) {
   )
 }
 
-function ServiceDetailCard({ title, description, imageSrc }) {
+function ServiceDetailCard({ title, description }) {
   return (
-    <div className="bg-gray-100 p-6 rounded-lg flex flex-col lg:flex-row items-center">
-      <div className="lg:w-1/2 lg:pr-6 mb-6 lg:mb-0">
-        <h3 className="text-xl font-semibold mb-4">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <a href="#" className="text-blue-600 font-semibold flex items-center">
-          Đọc thêm
-          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-      <div className="lg:w-1/2">
-        <img
-          src={imageSrc}
-          alt={title}
-          className="w-full h-auto rounded-lg"
-        />
-      </div>
+    <div className="bg-gray-100 p-6 rounded-lg">
+      <h3 className="text-xl font-semibold mb-4">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <a href="#" className="text-blue-600 font-semibold flex items-center">
+        Đọc thêm
+        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
     </div>
   )
 }
@@ -389,26 +412,17 @@ function ReviewCard({ name, review }) {
   )
 }
 
-function BlogPostCard({ id, title, date, image }) {
+function BlogPostCard({ title, date }) {
   return (
-    <div className="bg-gray-100 p-6 rounded-lg flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2 mb-4 md:mb-0 md:pr-6">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-auto rounded-lg"
-        />
-      </div>
-      <div className="md:w-1/2">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-500 mb-4">{date}</p>
-        <a href={`/blog/${id}`} className="text-blue-600 font-semibold flex items-center">
-          Đọc thêm
-          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
+    <div className="bg-gray-100 p-6 rounded-lg">
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-500 mb-4">{date}</p>
+      <a href="#" className="text-blue-600 font-semibold flex items-center">
+        Đọc thêm
+        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
     </div>
   )
 }
@@ -421,4 +435,3 @@ function FeatureCard({ title, description }) {
     </div>
   )
 }
-export default Cargo10;
