@@ -1,22 +1,22 @@
+import cargoShipImage from "./assets/aerial-view-cargo-ship-cargo-container-harbor.jpg";
+import logisticsImage from "./assets/logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg";
+import containerYardImage from "./assets/industrial-port-container-yard.jpg";
+
 const services = [
   {
     title: "Vận chuyển hàng Đức, EU về Việt Nam",
     description: "Chúng tôi cung cấp dịch vụ vận chuyển hàng từ Đức và các nước EU về Việt Nam qua đường hàng không và đường biển. Với thời gian vận chuyển nhanh chóng chỉ từ 4-6 ngày, hàng hóa được đảm bảo an toàn, đáp ứng mọi nhu cầu của bạn.",
-    // image: "/placeholder.svg?height=400&width=600",
-    image: "src\\assets\\aerial-view-cargo-ship-cargo-container-harbor.jpg",
+    image: cargoShipImage,
     imageAlt: "Vận chuyển hàng từ Đức, EU về Việt Nam",
   },
   {
     title: "Vận chuyển hàng Việt Nam đi Đức, EU",
     description: "Vận chuyển hàng hóa từ Việt Nam sang Đức và các nước EU chưa bao giờ dễ dàng hơn. Chúng tôi hỗ trợ gửi hàng qua đường hàng không với tốc độ nhanh hoặc đường biển với chi phí tối ưu, đảm bảo an toàn cho mọi loại hàng hóa.",
-    image: "src\\assets\\logistics-transportation-container-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpg",
+    image: logisticsImage,
     imageAlt: "Vận chuyển hàng từ Việt Nam đi Đức, EU",
   },
   {
     title: "Mua hộ hàng Đức, EU và Shopee miễn phí",
-    description: "Chúng tôi hỗ trợ mua hộ từ các trang thương mại điện tử uy tín như Amazon, eBay, DM... tại Đức và các nước EU, đồng thời nhận mua hộ Shopee tại Việt Nam gửi sang Đức, EU. Quy trình nhanh gọn và chi phí hợp lý giúp bạn dễ dàng sở hữu những sản phẩm yêu thích.",
-    image: "src/assets/industrial-port-container-yard.jpg",
-    imageAlt: "Mua hộ hàng Đức, EU và Shopee miễn phí",
   },
 ]
 
