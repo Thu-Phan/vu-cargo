@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
-      <h2 className="text-2xl font-bold mb-6 text-blue-600">
+      <h2 className="text-2xl font-bold mb-6 text-red-600">
         VÌ SAO NÊN CHỌN VU CARGO?
       </h2>
       <p className="mb-8 text-gray-600">

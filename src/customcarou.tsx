@@ -21,7 +21,7 @@ const images = [
     href: 'https://example.com/page1'
   },
   {
-    src: 'src\\assets\\shipping.png',
+    src: 'src\\assets\\plane.jpg',
     title: 'How to ship from Germany to Vietnam efficiently?',
     author: 'Admin',
     date: 'November 21, 2023',

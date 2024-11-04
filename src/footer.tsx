@@ -5,10 +5,8 @@ const footerSections = [
   {
     title: "Giới Thiệu Công Ty",
     items: [
+      { title: "Về chúng tôi", href: "#" },
       { title: "Điều khoản gửi hàng", href: "#" },
-      { title: "Chính sách khiếu nại", href: "#" },
-      { title: "Chính sách bảo mật", href: "#" },
-      { title: "Chính sách thanh toán", href: "#" },
     ],
   },
   {
@@ -44,14 +42,15 @@ const Footer = () => {
         {/* Desktop Footer */}
         <div className="hidden md:flex justify-between">
           <div className="w-1/4">
-            <h2 className="text-2xl font-bold mb-4">Vu Cargo</h2>
+            {/* <h2 className="text-2xl font-bold mb-4">Vu Cargo</h2> */}
             <p className="mb-2">
-              <strong>Địa chỉ:</strong>
+              <strong>Địa chỉ:</strong> <br></br>
+              Đức: Max-Planck-Straße 16, 63303 Dreieich, Germany<br></br>
+              Việt Nam: Kho Gia Lâm - Hà Nội
             </p>
-            <p className="mb-2">
-              Đức: Max-Planck-Straße 16, 63303 Dreieich, Germany
-            </p>
-            <p className="mb-2">Việt Nam: Kho Gia Lâm - Hà Nội</p>
+
+              
+            <p className="mb-2"></p>
             <p className="mb-2">
               <strong>Tel:</strong> (+49) 176.5585.9000
             </p>

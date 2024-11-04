@@ -22,6 +22,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import ContactSidebar from "./side";
+import MobileFooter from "./mobile-footer";
 
 export default function Cargo() {
   const [customerCode, setCustomerCode] = useState("");
@@ -162,7 +163,7 @@ export default function Cargo() {
                   value={customerCode}
                   onChange={(e) => setCustomerCode(e.target.value)}
                 />
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-b sm:rounded-r sm:rounded-b-none flex items-center justify-center">
+                <button className="bg-red-600 text-white px-4 py-2 rounded-b sm:rounded-r sm:rounded-b-none flex items-center justify-center">
                   <Search className="mr-2" />
                   Tra Cứu
                 </button>
@@ -180,44 +181,7 @@ export default function Cargo() {
             <WhyChooseUs></WhyChooseUs>            
 
             {/* Customer Reviews Carousel */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-6 text-blue-600">
-                SỰ HÀI LÒNG TỪ KHÁCH HÀNG
-              </h2>
-              <div className="relative">
-                <ReviewCard
-                  name={reviews[currentReviewIndex].name}
-                  review={reviews[currentReviewIndex].review}
-                />
-                <div className="absolute top-1/2 transform -translate-y-1/2 left-0 -ml-4">
-                  <button
-                    onClick={() =>
-                      setCurrentReviewIndex(
-                        (prevIndex) =>
-                          (prevIndex - 1 + reviews.length) % reviews.length
-                      )
-                    }
-                    className="p-2 rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300"
-                    aria-label="Previous review"
-                  >
-                    <ChevronLeft className="w-6 h-6" />
-                  </button>
-                </div>
-                <div className="absolute top-1/2 transform -translate-y-1/2 right-0 -mr-4">
-                  <button
-                    onClick={() =>
-                      setCurrentReviewIndex(
-                        (prevIndex) => (prevIndex + 1) % reviews.length
-                      )
-                    }
-                    className="p-2 rounded-full bg-gray-200 text-gray-600 hover:bg-gray-300"
-                    aria-label="Next review"
-                  >
-                    <ChevronRight className="w-6 h-6" />
-                  </button>
-                </div>
-              </div>
-            </section>
+            
 
             {/* Blog Posts Carousel */}
            
@@ -226,23 +190,8 @@ export default function Cargo() {
       </div>
 
       {/* Sticky Footer for Mobile View */}
-      <footer className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2">
-        <div className="flex justify-around">
-          <ContactButton icon="src/assets/stock.jpg" text="Gọi ngayyyyyy" color="bg-blue-600" />
-          <ContactButton icon={<Phone />} text="Gọi ngayyyyyyy" color="bg-blue-600" />
-          <ContactButton
-            icon={<MessageCircle />}
-            text="Zalo"
-            color="bg-green-500"
-          />
-          <ContactButton
-            icon={<Facebook />}
-            text="Facebook"
-            color="bg-blue-800"
-          />
-        </div>
-      </footer>
-      
+      <MobileFooter></MobileFooter>
+            
     </div>
   );
 }

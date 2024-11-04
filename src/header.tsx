@@ -50,9 +50,6 @@ function StickyHeader() {
             <HeaderLink href="#" isMobile>
               Dịch Vụ
             </HeaderLink>
-            <HeaderLink href="#" isMobile>
-              Bảng Giá
-            </HeaderLink>
             <BangGia></BangGia>
             <HeaderLink href="#" isMobile>
               Chính Sách Mua Hàng

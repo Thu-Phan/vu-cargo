@@ -16,24 +16,24 @@ const ContactButton: React.FC<ContactButtonProps> = ({ imgSrc, text, color }) =>
         alt={text}
         className="w-full h-full object-contain"
       />
-      <span className="opacity-0 group-hover:opacity-100 absolute left-full ml-2 top-1/2 -translate-y-1/2 whitespace-nowrap bg-gray-800 text-white text-sm px-2 py-1 rounded transition-opacity z-50">
+      <span className="opacity-0 group-hover:opacity-100 absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gray-800 text-white text-sm px-2 py-1 rounded transition-opacity">
         {text}
       </span>
     </button>
   );
 };
 
-const ContactSidebar = () => {
+const MobileFooter = () => {
   return (
-    <aside className="hidden md:block fixed left-4 top-1/2 -translate-y-1/2 z-50">
-      <div className="flex flex-col items-center p-3 space-y-4 bg-gray-100 rounded-lg shadow-lg backdrop-blur-sm bg-opacity-90">
+    <footer className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 z-50 shadow-lg">
+      <div className="flex justify-around max-w-screen-xl mx-auto px-4">
         <ContactButton
           imgSrc="/src/assets/contact/vn.png"
           text="Gọi ngay"
           color="bg-blue-600"
         />
         <ContactButton
-          imgSrc="/src/assets/contact/de.png"
+          imgSrc="/src/assets/contact/vn.png"
           text="Gọi ngay"
           color="bg-blue-600"
         />
@@ -48,8 +48,8 @@ const ContactSidebar = () => {
           color="bg-blue-800"
         />
       </div>
-    </aside>
+    </footer>
   );
 };
 
-export default ContactSidebar;
+export default MobileFooter;
