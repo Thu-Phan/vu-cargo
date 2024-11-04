@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "'components/ui/button"';
 import {
   Card,
   CardContent,
@@ -6,15 +6,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "'components/ui/card"';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "'components/ui/carousel"';
 import { useEffect, useState } from "react";
+
+// Import images
+import stockImage from "./assets/stock.jpg";
+import deliveryManImage from "./assets/delivery-man.jpg";
+import containerImage from "./assets/container.jpg";
 
 interface BlogPost {
   id: number;
@@ -31,21 +36,21 @@ export function Component() {
       title: "Làm sao để chuyển hàng từ Đức về Việt Nam tiết kiệm nhất?",
       date: "November 22, 2023",
       author: "Admin",
-      image: "/src/assets/stock.jpg",
+      image: stockImage,
     },
     {
       id: 2,
       title: "Rủi ro và cách xử lý khi gửi hàng từ Đức về Việt Nam",
       date: "November 22, 2023",
       author: "Admin",
-      image: "/src/assets/delivery-man.jpg",
+      image: deliveryManImage,
     },
     {
       id: 3,
       title: "Mua hàng hộ tại các nước EU nhanh gọn, tiết kiệm nhất",
       date: "November 22, 2023",
       author: "Admin",
-      image: "/src/assets/container.jpg",
+      image: containerImage,
     },
   ]);
 
