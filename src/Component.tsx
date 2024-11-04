@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import StickyHeader from "./header";
 import ServiceGrid from "./service-card";
-import TestimonialCarousel2 from "./style2";
+
 import WhyChooseUs from "./whyChooseUs";
 import ServicesSection from "./services-section";
 import {
