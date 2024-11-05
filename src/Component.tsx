@@ -1,4 +1,3 @@
-{/* Previous imports remain unchanged */}
 import { useState, useEffect } from "react";
 import {
   Search,
@@ -11,7 +10,6 @@ import {
 } from "lucide-react";
 import StickyHeader from "./header";
 import ServiceGrid from "./service-card";
-
 import WhyChooseUs from "./whyChooseUs";
 import ServicesSection from "./services-section";
 import {
@@ -23,6 +21,11 @@ import {
 } from "@/components/ui/carousel";
 import ContactSidebar from "./side";
 import MobileFooter from "./mobile-footer";
+
+// Import images
+import stockImage from "./assets/stock.jpg";
+import deliveryManImage from "./assets/delivery-man.jpg";
+import containerImage from "./assets/container.jpg";
 
 export default function Cargo() {
   const [customerCode, setCustomerCode] = useState("");
@@ -53,29 +56,29 @@ export default function Cargo() {
       id: 1,
       title: "Làm sao để chuyển hàng từ Đức về Việt Nam tiết kiệm nhất?",
       date: "November 22, 2023",
-      image: "src/assets/stock.jpg",
+      image: stockImage,
       author: "Admin"
     },
     {
       id: 2,
       title: "Rủi ro và cách xử lý khi gửi hàng từ Đức về Việt Nam",
       date: "November 22, 2023",
-      image: "src/assets/delivery-man.jpg",
+      image: deliveryManImage,
       author: "Admin"
     },
     {
       id: 3,
       title: "Mua hàng hộ tại các nước EU nhanh gọn, tiết kiệm nhất",
       date: "November 22, 2023",
-      image: "src/assets/container.jpg",
+      image: containerImage,
       author: "Admin"
     },
   ];
 
   const heroImages = [
-    "src\\assets\\container.jpg",
-    "src\\assets\\stock.jpg",
-    "src\\assets\\delivery-man.jpg",
+    containerImage,
+    stockImage,
+    deliveryManImage,
   ];
 
   useEffect(() => {
@@ -92,13 +95,12 @@ export default function Cargo() {
       clearInterval(heroInterval);
     };
   }, []);
-  // sticky sidebar
 
   return (
     <div className="min-h-screen bg-white font-sans">
       <div className="flex">
         <ContactSidebar></ContactSidebar>
-                <main className="flex-1 md:ml-16">
+        <main className="flex-1 md:ml-16">
           {/* Hero Section */}
           <section className="relative h-[600px] overflow-hidden">
             {heroImages.map((src, index) => (
@@ -179,12 +181,6 @@ export default function Cargo() {
 
             {/* Why Choose Us */}
             <WhyChooseUs></WhyChooseUs>            
-
-            {/* Customer Reviews Carousel */}
-            
-
-            {/* Blog Posts Carousel */}
-           
           </div>
         </main>
       </div>

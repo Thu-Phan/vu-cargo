@@ -17,6 +17,9 @@ const services = [
   },
   {
     title: "Mua hộ hàng Đức, EU và Shopee miễn phí",
+    description: "Chúng tôi hỗ trợ mua hộ từ các trang thương mại điện tử uy tín như Amazon, eBay, DM... tại Đức và các nước EU, đồng thời nhận mua hộ Shopee tại Việt Nam gửi sang Đức, EU. Quy trình nhanh gọn và chi phí hợp lý giúp bạn dễ dàng sở hữu những sản phẩm yêu thích.",
+    image: containerYardImage,
+    imageAlt: "Mua hộ hàng Đức, EU và Shopee miễn phí",
   },
 ]
 
@@ -49,4 +52,5 @@ function ServicesSection() {
     </section>
   )
 }
+
 export default ServicesSection;

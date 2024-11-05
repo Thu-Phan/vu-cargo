@@ -10,33 +10,34 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import lotusImage from "./assets/lotus.jpg"
 
 const reviews = [
   {
     id: 1,
     name: "Bảo Dan",
-    avatar: "src\\assets\\lotus.jpg",
+    avatar: lotusImage,
     rating: 5,
     review: "Công nhận bên bạn giao nhanh thật. Trừ hàng xách tay ra m chưa thấy ở đâu nhanh như vậy luôn. Mình thấy vì bên Vu Cargo công đễ thương thiệt, bạn nhân viên check tin nhắn trả lời khách rất dễ thương luôn."
   },
   {
     id: 2,
     name: "Đông Cool",
-    avatar: "src\\assets\\lotus.jpg",
+    avatar: lotusImage,
     rating: 5,
     review: "Bên bạn giao hàng nhanh mà giá ổn ớn. Người nhà mình còn bất ngờ vì hàng giao quá nhanh đy chứ! Giống như giao hàng tốc ở Việt Nam vậy."
   },
   {
     id: 3,
     name: "Tina",
-    avatar: "src\\assets\\lotus.jpg",
+    avatar: lotusImage,
     rating: 5,
     review: "Mình đã nhận được hàng đầy đủ. Cảm ơn bạn nhiều. Dịch vụ của Vu Cargo mình rất ưng tâm."
   },
   {
     id: 4,
     name: "Alex",
-    avatar: "src\\assets\\lotus.jpg",
+    avatar: lotusImage,
     rating: 5,
     review: "Dịch vụ chuyên nghiệp, nhân viên nhiệt tình. Sẽ ủng hộ dài dài."
   }
@@ -128,7 +129,6 @@ export default function CustomerReviewCarousel() {
                       <p className="text-gray-600 relative pl-4 pt-2 text-sm">
                         {review.review}
                       </p>
-                      {/* <span className="text-5xl text-gray-200 absolute bottom-0 right-0 leading-none">"</span> */}
                     </div>
                   </div>
                 </div>

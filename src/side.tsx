@@ -1,4 +1,8 @@
 import React from 'react';
+import vnFlag from "./assets/contact/vn.png";
+import deFlag from "./assets/contact/de.png";
+import zaloIcon from "./assets/contact/Icon_of_Zalo.svg.png";
+import facebookIcon from "./assets/contact/facebook_icon.png";
 
 interface ContactButtonProps {
   imgSrc: string;
@@ -28,22 +32,22 @@ const ContactSidebar = () => {
     <aside className="hidden md:block fixed left-4 top-1/2 -translate-y-1/2 z-50">
       <div className="flex flex-col items-center p-3 space-y-4 bg-gray-100 rounded-lg shadow-lg backdrop-blur-sm bg-opacity-90">
         <ContactButton
-          imgSrc="/src/assets/contact/vn.png"
+          imgSrc={vnFlag}
           text="Gọi ngay"
           color="bg-blue-600"
         />
         <ContactButton
-          imgSrc="/src/assets/contact/de.png"
+          imgSrc={deFlag}
           text="Gọi ngay"
           color="bg-blue-600"
         />
         <ContactButton
-          imgSrc="/src/assets/contact/Icon_of_Zalo.svg.png"
+          imgSrc={zaloIcon}
           text="Zalo"
           color="bg-green-500"
         />
         <ContactButton
-          imgSrc="/src/assets/contact/facebook_icon.png"
+          imgSrc={facebookIcon}
           text="Facebook"
           color="bg-blue-800"
         />
