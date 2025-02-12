@@ -76,7 +76,7 @@ export default function CustomCarousel() {
   const visibleImages = images.slice(currentIndex).concat(images.slice(0, currentIndex))
 
   return (
-    <Carousel className="w-full max-w-5xl mx-auto">
+<Carousel className="w-full">
       <CarouselContent>
         {visibleImages.slice(0, itemsToShow).map((image, index) => (
           <CarouselItem key={index} className={isMobile ? 'basis-full' : 'basis-1/3'}>

@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12">
+<section className="px-4 py-12 w-full">
       <h2 className="text-2xl font-bold mb-6 text-red-600">
         VÌ SAO NÊN CHỌN VU CARGO?
       </h2>

@@ -22,10 +22,10 @@ function StickyHeader() {
         <nav className="flex justify-between items-center">
           <div className="text-2xl font-bold text-red-500">VU Cargo</div>
           <div className="hidden md:flex items-center space-x-4">
-            <HeaderLink href="#">Trang Chủ</HeaderLink>
+            <HeaderLink href="/">Trang Chủ</HeaderLink>
             <HeaderLink href="#">Dịch Vụ</HeaderLink>
             <MenuDropdown></MenuDropdown>
-<HeaderLink href="/faq">Chính Sách Mua Hàng</HeaderLink>
+            <HeaderLink href="/faq">Chính Sách Mua Hàng</HeaderLink>
             <HeaderLink href="#">Blog</HeaderLink>
             <HeaderLink href="#">Liên Hệ</HeaderLink>
             <div className="flex space-x-2">
@@ -44,16 +44,16 @@ function StickyHeader() {
         {/* Mobile */}
         {isMenuOpen && (
           <div className="mt-4 md:hidden">
-            <HeaderLink href="#" isMobile>
+            <HeaderLink href="/" isMobile>
               Trang Chủ
             </HeaderLink>
             <HeaderLink href="#" isMobile>
               Dịch Vụ
             </HeaderLink>
             <BangGia></BangGia>
-<HeaderLink href="/faq" isMobile>
-  Chính Sách Mua Hàng
-</HeaderLink>
+            <HeaderLink href="/faq" isMobile>
+              Chính Sách Mua Hàng
+            </HeaderLink>
             <HeaderLink href="#" isMobile>
               Blog
             </HeaderLink>

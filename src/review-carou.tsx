@@ -18,7 +18,7 @@ const reviews = [
     name: "Bảo Dan",
     avatar: lotusImage,
     rating: 5,
-    review: "Công nhận bên bạn giao nhanh thật. Trừ hàng xách tay ra m chưa thấy ở đâu nhanh như vậy luôn. Mình thấy vì bên Vu Cargo công đễ thương thiệt, bạn nhân viên check tin nhắn trả lời khách rất dễ thương luôn."
+    review: "Công nhận bên bạn giao nhanh thật. Trừ hàng xách tay ra m chưa thấy ở đâu nhanh như vậy luôn. Bạn nhân viên check tin nhắn trả lời khách rất dễ thương luôn."
   },
   {
     id: 2,

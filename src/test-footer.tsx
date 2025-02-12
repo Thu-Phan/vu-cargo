@@ -96,8 +96,8 @@ const ModernFooter = () => {
   };
 
   return (
-    <footer className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+<footer className="bg-white py-12 px-4 sm:px-6 lg:px-8 w-full">
+      <div className="w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="col-span-1">
             <ContactCard />
