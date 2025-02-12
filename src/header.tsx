@@ -25,7 +25,7 @@ function StickyHeader() {
             <HeaderLink href="#">Trang Chủ</HeaderLink>
             <HeaderLink href="#">Dịch Vụ</HeaderLink>
             <MenuDropdown></MenuDropdown>
-            <HeaderLink href="#">Chính Sách Mua Hàng</HeaderLink>
+<HeaderLink href="/faq">Chính Sách Mua Hàng</HeaderLink>
             <HeaderLink href="#">Blog</HeaderLink>
             <HeaderLink href="#">Liên Hệ</HeaderLink>
             <div className="flex space-x-2">
@@ -51,9 +51,9 @@ function StickyHeader() {
               Dịch Vụ
             </HeaderLink>
             <BangGia></BangGia>
-            <HeaderLink href="#" isMobile>
-              Chính Sách Mua Hàng
-            </HeaderLink>
+<HeaderLink href="/faq" isMobile>
+  Chính Sách Mua Hàng
+</HeaderLink>
             <HeaderLink href="#" isMobile>
               Blog
             </HeaderLink>

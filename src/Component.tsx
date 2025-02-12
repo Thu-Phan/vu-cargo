@@ -97,7 +97,7 @@ export default function Cargo() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+<div className="min-h-screen bg-white font-sans w-full">
       <div className="flex">
         <ContactSidebar></ContactSidebar>
         <main className="flex-1 md:ml-16">
@@ -153,9 +153,9 @@ export default function Cargo() {
             </button>
           </section>
 
-          <div className="container mx-auto px-4 py-8 mb-16 md:mb-0">
+          <div className="container mx-auto px-4 py-8 mb-16 md:mb-0 w-full">
             {/* Customer Code Search */}
-            <div className="bg-gray-100 p-6 rounded-lg mb-8">
+            <div className="bg-gray-100 p-6 rounded-lg mb-8 w-full">
               <h2 className="text-xl font-semibold mb-4">Tra Cứu</h2>
               <div className="flex flex-col sm:flex-row">
                 <input
@@ -180,7 +180,58 @@ export default function Cargo() {
             <ServicesSection></ServicesSection>
 
             {/* Why Choose Us */}
-            <WhyChooseUs></WhyChooseUs>            
+            <WhyChooseUs></WhyChooseUs>
+
+            {/* Subscription Form */}
+            <div className="bg-gray-100 p-8 rounded-lg mt-12">
+              <h2 className="text-3xl font-bold text-center mb-4">
+                Chúng tôi cam kết sẽ làm bạn hài lòng!
+              </h2>
+              <p className="text-gray-600 text-center mb-8">
+                *Nhập email để nhận ưu đãi đặc biệt dành cho khách hàng lần đầu gửi
+              </p>
+              
+              <form className="max-w-2xl mx-auto space-y-6">
+                <div>
+                  <label className="block text-gray-700 mb-2">Tên đầy đủ*</label>
+                  <input
+                    type="text"
+                    placeholder="Nhập tên của bạn*"
+                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 mb-2">Email*</label>
+                  <input
+                    type="email"
+                    placeholder="Email nhận ưu đãi của bạn*"
+                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-gray-700 mb-2">Ghi chú (tùy chọn)</label>
+                  <textarea
+                    placeholder="Bạn cần gửi hàng đến quốc gia nào, loại vật phẩm nào... hay bạn cần Amamy tư vấn những gì?"
+                    className="w-full p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <div className="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition duration-300"
+                >
+                  ĐĂNG KÝ NHẬN KHUYẾN MÃI
+                </button>
+              </form>
+            </div>
           </div>
         </main>
       </div>
