@@ -11,31 +11,36 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
+import containerImage from './assets/container.jpg'
+import planeImage from './assets/plane.jpg'
+import deliveryManImage from './assets/delivery-man.jpg'
+import stockImage from './assets/stock.jpg'
+
 // Updated images array with metadata and links
 const images = [
   {
-    src: 'src\\assets\\container.jpg',
+    src: containerImage,
     title: 'Làm sao để chuyển hàng từ Đức về Việt Nam tiết kiệm nhất?',
     author: 'Admin',
     date: 'November 22, 2023',
     href: 'https://example.com/page1'
   },
   {
-    src: 'src\\assets\\plane.jpg',
+    src: planeImage,
     title: 'How to ship from Germany to Vietnam efficiently?',
     author: 'Admin',
     date: 'November 21, 2023',
     href: 'https://example.com/page2'
   },
   {
-    src: 'src\\assets\\delivery-man.jpg',
+    src: deliveryManImage,
     title: 'Best practices for international shipping',
     author: 'Admin',
     date: 'November 20, 2023',
     href: 'https://example.com/page3'
   },
   {
-    src: 'src\\assets\\stock.jpg',
+    src: stockImage,
     title: 'International logistics guide',
     author: 'Admin',
     date: 'November 19, 2023',

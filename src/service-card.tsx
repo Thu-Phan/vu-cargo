@@ -1,4 +1,7 @@
 import { FC } from 'react'
+import profitIcon from './assets/profit.png'
+import shippingIcon from './assets/shipping.png'
+import deliveryServiceIcon from './assets/delivery-service.png'
 
 interface ServiceCardProps {
   title: string
@@ -21,17 +24,17 @@ export default function ServiceGrid() {
     {
       title: "Ước tính lệ phí",
       description: "Nhanh chóng tính toán chi phí vận chuyển dựa trên kích thước và trọng lượng",
-      iconSrc: "src\\assets\\profit.png"
+      iconSrc: profitIcon
     },
     {
       title: "Gửi hàng trực tuyến",
       description: "Tiện lợi tạo đơn và quản lý vận chuyển chỉ với vài thao tác đơn giản",
-      iconSrc: "src\\assets\\shipping.png"
+      iconSrc: shippingIcon
     },
     {
       title: "Theo dõi lô hàng",
       description: "Luôn biết vị trí đơn hàng với hệ thống theo dõi chính xác theo thời gian thực",
-      iconSrc: "src\\assets\\delivery-service.png"
+      iconSrc: deliveryServiceIcon
     }
   ]
 
