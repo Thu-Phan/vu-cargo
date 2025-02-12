@@ -3,7 +3,7 @@ import { Card } from "./components/ui/card";
 
 const SignUpPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 pt-20">
       <Card className="w-full max-w-md p-8 space-y-6">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900">Đăng ký</h1>
