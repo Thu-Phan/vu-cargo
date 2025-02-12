@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react";
 import BangGia from "./header-test";
 import MenuDropdown from "./menu-dropdown";
@@ -6,6 +7,7 @@ import MenuDropdown from "./menu-dropdown";
 function StickyHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,11 +28,11 @@ function StickyHeader() {
             <HeaderLink href="#">Dịch Vụ</HeaderLink>
             <MenuDropdown></MenuDropdown>
             <HeaderLink href="/faq">Chính Sách Mua Hàng</HeaderLink>
-            <HeaderLink href="#">Blog</HeaderLink>
+            <HeaderLink href="/blog">Blog</HeaderLink>
             <HeaderLink href="#">Liên Hệ</HeaderLink>
             <div className="flex space-x-2">
-              <HeaderButton>Đăng Nhập</HeaderButton>
-              <HeaderButton isPrimary>Đăng Kí</HeaderButton>
+              <HeaderButton onClick={() => navigate('/login')}>Đăng Nhập</HeaderButton>
+              <HeaderButton isPrimary onClick={() => navigate('/signup')}>Đăng Kí</HeaderButton>
             </div>
           </div>
           <button
@@ -54,15 +56,15 @@ function StickyHeader() {
             <HeaderLink href="/faq" isMobile>
               Chính Sách Mua Hàng
             </HeaderLink>
-            <HeaderLink href="#" isMobile>
+            <HeaderLink href="/blog" isMobile>
               Blog
             </HeaderLink>
             <HeaderLink href="#" isMobile>
               Liên Hệ
             </HeaderLink>
             <div className="mt-4 space-y-2">
-              <HeaderButton isMobile>Đăng Nhập</HeaderButton>
-              <HeaderButton isMobile isPrimary>
+              <HeaderButton isMobile onClick={() => navigate('/login')}>Đăng Nhập</HeaderButton>
+              <HeaderButton isMobile isPrimary onClick={() => navigate('/signup')}>
                 Đăng Kí
               </HeaderButton>
             </div>
@@ -87,7 +89,7 @@ function HeaderLink({ href, children, isMobile = false }) {
   );
 }
 
-function HeaderButton({ children, isMobile = false, isPrimary = false }) {
+function HeaderButton({ children, isMobile = false, isPrimary = false, onClick = () => {} }) {
   return (
     <button
       className={`
@@ -99,11 +101,13 @@ function HeaderButton({ children, isMobile = false, isPrimary = false }) {
             : "border-2 border-red-500 bg-transparent text-red-500 hover:bg-red-50"
         }
       `}
+      onClick={onClick}
     >
       {children}
     </button>
   );
 }
+
 function CloneHeaderButton({ children, isMobile = false, isPrimary = false }) {
   return (
     <button

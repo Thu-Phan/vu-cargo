@@ -182,56 +182,10 @@ export default function Cargo() {
             {/* Why Choose Us */}
             <WhyChooseUs></WhyChooseUs>
 
-            {/* Subscription Form */}
-            <div className="bg-gray-100 p-8 rounded-lg mt-12">
-              <h2 className="text-3xl font-bold text-center mb-4">
-                Chúng tôi cam kết sẽ làm bạn hài lòng!
-              </h2>
-              <p className="text-gray-600 text-center mb-8">
-                *Nhập email để nhận ưu đãi đặc biệt dành cho khách hàng lần đầu gửi
-              </p>
-              
-              <form className="max-w-2xl mx-auto space-y-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">Tên đầy đủ*</label>
-                  <input
-                    type="text"
-                    placeholder="Nhập tên của bạn*"
-                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    required
-                  />
-                </div>
 
-                <div>
-                  <label className="block text-gray-700 mb-2">Email*</label>
-                  <input
-                    type="email"
-                    placeholder="Email nhận ưu đãi của bạn*"
-                    className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                    required
-                  />
-                </div>
 
-                <div>
-                  <label className="block text-gray-700 mb-2">Ghi chú (tùy chọn)</label>
-                  <textarea
-                    placeholder="Bạn cần gửi hàng đến quốc gia nào, loại vật phẩm nào... hay bạn cần Amamy tư vấn những gì?"
-                    className="w-full p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-red-500"
-                  />
-                </div>
 
-                <div className="mb-6">
-                  <div className="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition duration-300"
-                >
-                  ĐĂNG KÝ NHẬN KHUYẾN MÃI
-                </button>
-              </form>
-            </div>
           </div>
         </main>
       </div>
